@@ -19,16 +19,6 @@ def convert_gps_coords_DD_to_DMM(lat, lon):
     lon_degrees_str = str(lon_degrees)
     lon_minutes_str = str(lon_minutes_int)
     lon_minutes_dec_str = str(lon_minutes_dec)[2:]
-    if len(lon_degrees_str) == 1:
-        lon_degrees_str = "00" + lon_degrees_str
-    elif len(lon_degrees_str) == 2:
-        lon_degrees_str = "0" + lon_degrees_str
-    if len(lon_minutes_str) == 1:
-        lon_minutes_str = "0" + lon_minutes_str
-    if len(lon_minutes_dec_str) == 1:
-        lon_minutes_dec_str = lon_minutes_dec_str + "00"
-    elif len(lon_minutes_dec_str) == 2:
-        lon_minutes_dec_str = lon_minutes_dec_str + "0"
     
     lon_str = "E " + ((3-len(lon_degrees_str)) * "0") + lon_degrees_str + "° " + ((2-len(lon_minutes_str)) * "0") + \
         lon_minutes_str + "." + ((2-len(lon_minutes_dec_str)) * "0") + lon_minutes_dec_str
