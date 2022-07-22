@@ -1,4 +1,4 @@
-def convert_gps_coords_DD_to_DMM(lat, lon):
+def convert_gps_coords_DD_to_DDM(lat, lon):
     lat_degrees = int(lat)
     lat_minutes = round((lat - lat_degrees) * 60, 3)
     lat_minutes_int = int(lat_minutes)
