@@ -9,7 +9,7 @@ def convert_gps_coords_DD_to_DMM(lat, lon):
     lat_minutes_dec_str = str(lat_minutes_dec)[2:]
     
     lat_str = "N " + ((2-len(lat_degrees_str)) * "0") + lat_degrees_str + "° " + ((2-len(lat_minutes_str)) * "0") + \
-                lat_minutes_str + "." + ((2-len(lat_minutes_dec_str)) * "0") + lat_minutes_dec_str
+               lat_minutes_str + "." + ((2-len(lat_minutes_dec_str)) * "0") + lat_minutes_dec_str
     
     lon_degrees = int(lon)
     lon_minutes = round((lon - lon_degrees) * 60, 3)
@@ -21,7 +21,7 @@ def convert_gps_coords_DD_to_DMM(lat, lon):
     lon_minutes_dec_str = str(lon_minutes_dec)[2:]
     
     lon_str = "E " + ((3-len(lon_degrees_str)) * "0") + lon_degrees_str + "° " + ((2-len(lon_minutes_str)) * "0") + \
-        lon_minutes_str + "." + ((2-len(lon_minutes_dec_str)) * "0") + lon_minutes_dec_str
+               lon_minutes_str + "." + ((2-len(lon_minutes_dec_str)) * "0") + lon_minutes_dec_str
     
     final_str_coords = lat_str + " " + lon_str
     
